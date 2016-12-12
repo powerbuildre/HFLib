@@ -1,0 +1,260 @@
+/*
+* @Author: Administrator
+* @Date:   2016-12-08 14:27:32
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-12-12 11:14:52
+*/
+
+//     input {
+//     -webkit-transform: translate3d(0, 0, 0)
+// }
+html {
+    font-family: "Microsoft YaHei", å®‹ä½“, "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+    background-color: #FF4081;
+    color: #777;
+}
+
+.container {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 45px 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.container>.logo {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background-color: #EFEFEF;
+    border-radius: 75px;
+    margin: 0 auto;
+}
+
+.container>.logo::after {
+    content: ' ';
+    height: 150px;
+    width: 75px;
+    position: absolute;
+    background-color: #E1E1E1;
+    border-radius: 0 75px 75px 0;
+    left: 75px;
+    top: 0;
+}
+
+.container>.logo>.logo-block-top {
+    box-sizing: border-box;
+    height: 45px;
+    width: 54px;
+    border: 10px solid #F57C00;
+    border-bottom: 0;
+    position: absolute;
+    border-radius: 27px 27px 0 0;
+    left: 48px;
+    z-index: 1001;
+    top: 20px;
+}
+
+.container>.logo>.logo-block-bottom {
+    position: absolute;
+    height: 60px;
+    width: 80px;
+    box-sizing: border-box;
+    background-color: #FFA000;
+    z-index: 1001;
+    top: 65px;
+    left: 35px;
+    border-radius: 7px;
+}
+
+.container>.logo>.logo-block-bottom::before {
+    content: " ";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    top: 22px;
+    left: 34px;
+    box-sizing: border-box;
+}
+
+.container>.logo>.logo-block-bottom::after {
+    content: " ";
+    position: absolute;
+    height: 12px;
+    width: 6px;
+    background-color: #EFEFEF;
+    border-radius: 2px;
+    top: 30px;
+    left: 37px;
+    box-sizing: border-box;
+}
+
+.container>.login-header {
+    text-align: center;
+    font-size: 23px;
+    color: #FF4081;
+    font-weight: 400;
+    margin: 15px 0 18px 0;
+}
+
+.container>.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container>.content>.form-group {
+    position: relative;
+}
+
+.container>.content>.form-group>:first-child {
+    margin-bottom: 5px;
+}
+
+.container>.content>.form-group>.form-control {
+    z-index: 3;
+    height: 58px;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #777;
+    box-sizing: border-box;
+    outline: none;
+    display: inline-block;
+    padding-top: 22px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #FF4081;
+    font-size: 12px;
+    background: none;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.container>.content>.form-group>.form-label {
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 15px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+//     .form-group .form-control:invalid {
+//     outline: none;
+// }
+.container>.content>.form-group>.form-control:focus,
+.container>.content>.form-group>.form-control:valid {
+    box-shadow: 0 1px #FF4081;
+    border-color: #FF4081;
+}
+
+.container>.content>.form-group>.form-control:focus+.form-label,
+.container>.content>.form-group>.form-control:valid+.form-label {
+    font-size: 12px;
+    -ms-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-25px);
+}
+
+.container>.content>.option {
+    width: 100%;
+    height: 14px;
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+.container>.content>.option>.option-left {
+    width: 50%;
+    float: left;
+}
+
+.container>.content>.option>.option-left>a,
+.container>.content>.option>.option-left>a:hover {
+    color: #FF4081;
+    text-decoration: none;
+}
+
+.container>.content>.option>.option-right {
+    width: 50%;
+    float: right;
+    text-align: right;
+    position: relative;
+}
+
+.container>.content>.option>.option-right>.md-checkbox {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #FF4081;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 68px;
+}
+
+.container>.content>.option>.option-right>.md-checkbox[checked]:after {
+    content: " ";
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    height: 8px;
+    width: 15px;
+    box-sizing: border-box;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 2px;
+}
+
+.container>.login-button {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: 0px;
+    outline: 0px;
+    background-color: #FF4081;
+    border-radius: 30px;
+    right: -30px;
+    bottom: 91px;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+.container>.login-button:hover {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset, 0 3px 6px rgba(0, 0, 0, 0.16), 0 5px 11px rgba(0, 0, 0, 0.23)
+}
+
+.container>.login-button >.icon-login {
+    box-sizing: border-box;
+    position: relative;
+    width: 18px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+    display: block;
+    margin: auto;
+}
+
+.container>.login-button:hover>.icon-login {
+    -ms-transform: scale(1.2);
+    =webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.container>.login-button >.icon-login::after {
+    content: ' ';
+    box-sizing: border-box;
+    position: absolute;
+    left: 8px;
+    height: 12px;
+    width: 12px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    top: -4px;
+}
