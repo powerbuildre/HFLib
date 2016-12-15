@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    Object.create = function(prototype) {
+        function Func() {};
+        Func.prototype = prototype;
+        var o = new Func();
+        return o;
+    }
+
+    var Person = {
+        name: 'pawn',
+        sayHello: function() {
+            console.log(this.name);
+        }
+    }
+    var p = Object.create(Person);
+    console.log(p);
+    p.sayHello();
+    </script>
+</body>
+
+</html>

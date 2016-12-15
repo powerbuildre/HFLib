@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<div id="dv"></div>
+
+<body>
+    </script>
+    <script>
+    var Person = (function(window) {
+        var Person = function(name) {
+            return new Person.fn.init(name);
+        }
+
+        Person.fn = Person.prototype = {
+            constructor: Person,
+            init: function(name) {
+                this.name = name;
+                this.sayHello = function() {
+                    this.makeArray();
+                }
+            },
+            makeArray: function() {
+                console.log(this.name);
+            }
+        }
+
+        Person.fn.init.prototype = Person.fn;
+
+        return Person;
+    })();
+
+    var p = Person('pawn');
+    console.log(p);
+    p.sayHello();
+    </script>
+</body>
+
+</html>

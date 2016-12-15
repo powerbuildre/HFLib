@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .wave-container {
+        overflow: hidden;
+        margin: 80px auto;
+        width: 90%;
+    }
+    
+    .wave-item {
+        /*  background-color: pink;*/
+        width: 1px;
+        display: inline-block;
+        border-top: 1px solid red;
+    }
+    </style>
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="appController">
+            <div class="wave-container">
+                <div class="wave-item" ng-repeat="item in staticItems  track by $index" ng-style="{'height':item+'px'}">
+                </div>
+            </div>
+            <div class="wave-container">
+                <div class="wave-item" ng-repeat="item in dynamicItems  track by $index" ng-style="{'height':item+'px'}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
